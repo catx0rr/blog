@@ -6,11 +6,12 @@
     
     <div id="content">
       <b-row>
-        <b-col cols="12" md="3" sm="6">
-          <Profile />
-        </b-col>
-        <b-col cols="12" md="9" sm="6">
+        <b-col class="main-content" cols="12" md="9" sm="6">
           <Nuxt />
+        </b-col>
+        <b-col class="profile-side-content" cols="12" md="3" sm="6">
+          <Profile />
+          <SidePanel />
         </b-col>
       </b-row>
     </div>
@@ -24,12 +25,15 @@
 <script>
 import Header from '@/components/Header'
 import Profile from '@/components/Profile'
+import SidePanel from '@/components/SidePanel'
 import Footer from '@/components/Footer'
+
 
 export default {
   components: {
     Header,
     Profile,
+    SidePanel,
     Footer
   },
 }

@@ -6,13 +6,3 @@
     </footer>
   </div>
 </template>
-
-<script>
-</script>
-
-<style>
-div.footer {
-  background: #343a40;
-  color: #fff;
-}
-</style>

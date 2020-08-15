@@ -1,15 +1,17 @@
 <template>
-  <div class="profile-panel">
+  <b-container fluid class="profile-panel">
     <div class="catvatar">
       <div class="catvatar-img">
-        <img class="catvatar-responsive"
-             src="@/assets/profile/catx0rr.png" 
-             alt="cybernin">
+        <b-img 
+          src="@/assets/profile/catx0rr.png" 
+          fluid 
+          alt="cybernin.png">
+        </b-img>
       </div>
       
       <div class="info-panel">
-        <h2>catx0rr</h2>
-        <p>OSCP</p>
+        <h2 class="alias">catx0rr</h2>
+        <p><!--title here--></p>
         <div class="description">
           <p>Cybersecurity Enthusiast</p>
         </div>
@@ -21,12 +23,6 @@
           <p>
             <i class="fas fa-map-marker-alt"></i>
             127.0.0.1
-          </p>
-          <p>
-            <i class="fab fa-github"></i>
-            <a href="https://github.com/catx0rr">
-              https://github.com/catx0rr
-            </a>
           </p>
         </div>
         
@@ -49,46 +45,5 @@
         </div>
       </div>
     </div>
-
-    <div class="side-panel">
-      <SidePanel />
-    </div>
-  </div>
+  </b-container>
 </template>
-
-<script>
-import SidePanel from './SidePanel'
-
-export default {
-  components: {
-    SidePanel
-  }
-}
-
-</script>
-
-
-
-<style scoped>
-
-div#content div.profile-panel {
-  color: #fff;
-  background: #343a40;
-  width: 100%;
-}
-          
-div.profile-panel div.catvatar {
-  text-align: center;
-}
-
-div.info-panel {
-  text-align: left;
-}
-
-div.catvatar-img img {
-  border-radius: 100%;
-  margin: 2em auto;
-  height: auto;
-}
-
-</style>
