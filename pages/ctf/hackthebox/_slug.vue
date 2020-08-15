@@ -1,10 +1,10 @@
 <template>
-  <div id="start-page">
+  <div id="home-page">
     <article>
       <div class="page-header">
         <h1 class="blog-title">catx0rr - blog</h1>
         <p class="sub-title">
-          Sysadmin by day.. Pentester wannabe at night.
+          Just another cybersecurity enthusiast who is trying harder..
         </p>
       </div>
       
@@ -16,6 +16,7 @@
         </div>
         <div class="blog-content">
           <nuxt-content :document="blog" />
+          </p>
         </div>
       </div>
     </article>
@@ -29,8 +30,8 @@ export default {
   components: {
   },
   async asyncData({ $content, params }) {
-    const blog = await $content('all', params.slug || 'index').fetch()
-    return { blog } 
+    const blog = await $content('hackthebox', params.slug || 'index').fetch()
+    return { blog }
   }
 }
 </script>

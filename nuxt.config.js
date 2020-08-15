@@ -23,14 +23,13 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    title: process.env.npm_package_name || 'catx0rr',
+    title: 'catx0rr',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
       { hid: 'author', name: 'author', content: 'War "catx0rr" Torrente I' },
-      { hid: 'description', name: 'description', content: 'catx0rr, Just another cybersecurity enthusiast. Personal Website, CTF and Cybersecurity Blog' },
-      { hid: 'keywords', name: 'keywords', content: 'opensource, tryhackme, cybersecurity, hacking, infosec, security, information security, linux, ctf writeups, writeups, ctf, hackthebox, penetration testing, pentesting' }
+      { hid: 'description', name: 'description', content: 'catx0rr, Sysadmin by day.. Pentester wannabe at night. Personal Website, CTF and Cybersecurity Blog' },
+      { hid: 'keywords', name: 'keywords', content: 'opensource, tryhackme, hackthebox, cybersecurity, hacking, infosec, security, information security, linux, writeup, ctf writeups, writeups, ctf, penetration testing, pentesting' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

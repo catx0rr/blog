@@ -1,21 +1,14 @@
 <template>
   <div id="start-page">
     <article>
-      <div class="page-header">
-        <h1 class="blog-title">catx0rr - blog</h1>
-        <p class="sub-title">
-          Sysadmin by day.. Pentester wannabe at night.
-        </p>
-      </div>
-      
       <div class="posts">
         <div class="blog-info">
-          <h3>
-            Test Blog 1
-          </h3>
+          <h2 class="blog-title">
+          </h2>
         </div>
         <div class="blog-content">
           <nuxt-content :document="blog" />
+          </p>
         </div>
       </div>
     </article>
@@ -25,12 +18,12 @@
 <script>
 
 export default {
-  layout: 'default',
+  layout: 'blog',
   components: {
   },
   async asyncData({ $content, params }) {
-    const blog = await $content('all', params.slug || 'index').fetch()
-    return { blog } 
+    const blog = await $content('tryhackme', params.slug || 'index').fetch()
+    return { blog }
   }
 }
 </script>

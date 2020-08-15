@@ -11,7 +11,7 @@
         <h2>catx0rr</h2>
         <p>OSCP</p>
         <div class="description">
-          <p>Hacker Wannabe</p>
+          <p>Cybersecurity Enthusiast</p>
         </div>
         <div class="other-info">
           <p>
