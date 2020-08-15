@@ -1,0 +1,51 @@
+
+/** Page modes **/
+
+:root {
+  --color: #1c1c1c;
+  --color-primary: #158876;
+  --color-secondary: #0e2233;
+  --bg: #d9d9d9;
+  --bg-secondary: #f2f2f2;
+  --border-color: #737373;
+  --hover-color: #5d8bad;
+  --header-color: #f3f5f4;
+  --revbg-color: #161616a;
+  --toggler-color: rgba(0, 0, 0, 0.1);
+  --toggler-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+}
+
+.dark-mode {
+  --color: #cccccc;
+  --color-primary: #41b38a;
+  --color-secondary: #fdf9f3;
+  --bg: #1c1c1c;
+  --bg-secondary: #071521;
+  --border-color: #999999;
+  --hover-color: #ff0000;
+  --header-color: #161616;
+  --revbg-color: #f3f5f4;
+  --toggler-color: rgba(255, 255, 255, 0.1);
+  --toggler-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+}
+
+/** Default resets **/
+
+body,
+div#__layout {
+  font-family: 'Noto Sans', sans-serif;
+  background: var(--bg);
+  color: var(--color);
+}
+
+div.default-init {
+  width: 80%;
+}
+
+
+/** Media Viewports **/
+@media only screen and (max-width: 992px) {
+  div.default-init {
+    width: 100%;
+  }
+}
