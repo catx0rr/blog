@@ -1,12 +1,14 @@
 <template>
-  <b-container fluid id="about-page">
-    <div class="page-title">
-      <h1 class="header-title">About</h1>
+  <div>
+    <div class="pg-title">
+      <h1 class="hd-title">About</h1>
     </div>
-    <div class="blog-heading">
+    
+    <div class="pg-description">
       <Title />
     </div>
-    <div class="social-links">
+    
+    <div class="s-links">
       <p>Tryhackme -
         <a href="https://tryhackme.com/p/catx0rr">catx0rr</a>
       </p>
@@ -24,9 +26,9 @@
       </p>
     </div>
 
-    <div class="badge-title-box">
+    <div class="bdg-title-box">
       <h3>CTF Badges</h3>
-      <div class="badge-flex-box">
+      <b-container class="bdg-flex-box">
         <b-row> 
           <b-col col="12" sm="6">
             <div class="thm">
@@ -42,24 +44,25 @@
             </div>
           </b-col>
         </b-row>
-      </div>
+      </b-container>
     </div>
 
-    <div class="data">
+    <div class="p-data">
       <h3>Resume</h3>
-      <div class="sig">
+      <div class="sha-sig">
         <p>
           SHA256 - 5e6b6e6b96580e48ab105d4a2b8afb34f31140364d18c9aabb9849c4e715e962
         </p>
       </div>
 
-      <div class="resume-dl">
+      <div class="cv-dl">
         <div class="btn">
           <b-button class="btn-link" href="/catx0rr_resume.pdf" download>Download</b-button>
         </div>
       </div>
+    
     </div>
-  </b-container>
+  </div>
 </template>
 
 <script>

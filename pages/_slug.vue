@@ -1,25 +1,31 @@
 <template>
-  <b-container fluid id="start-page">
-    <article>
-      <div class="page-header">
-        <h1 class="blog-title">catx0rr - blog</h1>
-        <p class="sub-title">
-          Sysadmin by day.. Pentester wannabe at night.
-        </p>
-      </div>
-      
-      <div class="blog-content">
-        <nuxt-content :document="blog" />
-      </div>
-    </article>
-  </b-container>
+  <div id="start-page">
+    <div class="pf-component">
+      <Profile />
+      <LeftPanel />
+    </div>
+    
+    <div class="blog-content">
+      <StartPage />
+      <nuxt-content :document="blog" />
+    </div>
+    <div class="rp-component">
+      <RightPanel />
+    </div>
+  </div>
 </template>
 
 <script>
+import StartPage from '@/components/StartPage'
+import LeftPanel from '@/components/LeftPanel'
+import RightPanel from '@/components/RightPanel'
 
 export default {
   layout: 'default',
   components: {
+    StartPage,
+    LeftPanel,
+    RightPanel
   },
   async asyncData({ $content, params }) {
     const blog = await $content('all', params.slug || 'index').fetch()

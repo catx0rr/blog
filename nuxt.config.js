@@ -9,7 +9,7 @@ export default {
    ** SPA loading animation
   */
   loadingIndicator: {
-    name: 'cube-grid',
+    name: 'circle',
     color: '#1c1c1c',
     background: '#d9d9d9'
   },

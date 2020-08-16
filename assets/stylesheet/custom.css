@@ -31,6 +31,17 @@
 
 /** Default resets **/
 
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.container-fluid {
+  padding: 0 7.5px 0 7.5px;
+  margin: 0 auto 0 auto;
+}
+
 body,
 div#__layout {
   font-family: 'Noto Sans', sans-serif;
@@ -38,14 +49,250 @@ div#__layout {
   color: var(--color);
 }
 
-div.default-init {
-  width: 80%;
+div#main {
+  width: 70%;
 }
 
-
-/** Media Viewports **/
-@media only screen and (max-width: 992px) {
-  div.default-init {
+@media only all and (max-width: 992px) {
+  div#main {
     width: 100%;
+    padding: 0;
+    margin: 0;
   }
 }
+
+/** Animation / Transition **/
+
+.page-enter-active,
+.page-leave-active {
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: .5s;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+body,
+div#__layout,
+nav.navbar {
+  transition: background .7s ease-in-out;
+}
+
+/** Components **/
+/* Header */
+
+nav .navbar-brand {
+  display: flex;
+  padding: 0;
+}
+
+nav.navbar {
+  margin-bottom: .5em;
+}
+
+nav.navbar,
+nav .menu-item .sub-menu {
+  background: var(--header-color);
+  box-shadow: 0 1px 10px var(--border-color),
+    0 1px 1px var(--border-color);
+}
+
+nav .menu-item .sub-menu {
+  position: absolute;
+  padding: .6em .6em;
+  font-size: .75em;
+  width: max-content;
+  z-index: 1;
+  box-shadow: 0 3px 3px var(--border-color)
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .5s ease-out;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+nav div.site-title-box {
+  font-size: inherit;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+}  
+
+div.site-title-box a.title {
+  text-decoration: none;
+  color: var(--color);
+}
+
+nav .csr-box {
+  flex-grow: 1;
+  padding: 0 0 .2em .2em;
+}
+
+nav.navbar ul li {
+  list-style-type: none;
+}
+
+
+ul li a.head-link {
+  text-decoration: none;
+  color: var(--color);
+  transition: .5s ease-out;
+}
+
+ul li a.head-link:hover {
+  color: var(--hover-color);
+  transition: .5s ease-out;
+  text-shadow: 0 0 1px var(--hover-color),
+    0 0 5px var(--hover-color);
+}
+nav .navbar-nav li  {
+  padding: 0 1em 0 1em;
+}
+
+button.navbar-toggler.collapsed:focus,
+button.navbar-toggler.not-collapsed:focus {
+  outline: none;
+}
+
+button.navbar-toggler.not-collapsed {
+  border: solid var(--toggler-color) 1px;
+  transition: .5s ease-out;
+}
+
+button.navbar-toggler.not-collapsed:active,
+button.navbar-toggler.collapsed:active {
+  background: var(--border-color);
+  transition: .5s ease-out;
+}
+
+button .navbar-toggler-icon {
+  background-image: var(--toggler-image);
+}
+
+.nav-item .no-glow:hover {
+  transition: none;
+  color: var(--color);
+  text-shadow: none;
+  cursor: default;
+}
+
+span.mobile-view {
+  display: none;
+}
+
+span.desktop-view, 
+div#start-page .init-content {
+  display: inline-block;
+}
+
+@media only all and (max-width: 992px) {
+  span.mobile-view {  
+    display: inline-block;
+  }
+  
+  span.desktop-view, 
+  div#start-page .init-content {
+    display: none;
+  }
+}
+
+/* cursor animation */
+
+.cursor {
+  font-size: .85em;
+  animation: fadein 1.3s infinite;
+  -moz-animation: fadein 1.3s infinite;
+  -webkit-animation: fadein 1.3s infinite;
+  -o-animation: fadein 1.3s step-end infinite;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadein {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+
+/** Pages **/
+
+div#about-page,
+div#start-page {
+    display: flex;
+    
+}
+
+#start-page div.pf-component,
+#about-page div.pf-component {
+    width: 30%;
+    
+}
+
+div.blog-content,
+div.about-content {
+    width: 70%;
+      flex-grow: 1;
+      
+}
+
+h2.alias {
+}
+
+
+@media only all and (max-width: 992px) {
+  div.pf-component {
+    display: none;
+  }
+
+  div.blog-content,
+  div.about-content {
+    flex-grow: 0;
+  }
+
+  div#start-page,
+  div#about-page {
+    display: block;
+  }  
+
+  h2.alias {
+    font-size: 5vh;      
+  }
+  
+}
+

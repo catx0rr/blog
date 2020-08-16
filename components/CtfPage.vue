@@ -35,7 +35,7 @@
         </div>
 
         <div class="write-ups">
-          <h2>Write-Ups</h2>
+          <h2>Categories</h2>
         </div>
 
         <div class="ctf-link">
