@@ -1,12 +1,14 @@
 <template>
   <div>
-    <div class="pg-title">
-      <h1 class="hd-title">About</h1>
-    </div>
+    <span class="desktop-view">
+      <div class="pg-title">
+        <h1 class="hd-title">About</h1>
+      </div>
     
-    <div class="pg-description">
-      <Title />
-    </div>
+      <div class="pg-description">
+        <Title />
+      </div>
+    </span>
     
     <div class="s-links">
       <p>Tryhackme -

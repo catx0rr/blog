@@ -1,9 +1,13 @@
 <template>
   <b-container fluid id="ctf-page">
-    <div class="header-links">
-      <nuxt-link to="/">catx0rr</nuxt-link> /
-      <nuxt-link to="/ctf">ctf</nuxt-link>
+    <b-container fluid>
+    <div class="nav-header-links">
+      <div class="link-inner">
+        <nuxt-link to="/">catx0rr</nuxt-link> /
+        <nuxt-link to="/ctf">ctf</nuxt-link>
+      </div>
     </div>
+    </b-container>
     
     <div class="page-title">
       <h1 class="header-title">CTF</h1>
@@ -12,7 +16,7 @@
     <div class="ctf-page-content">
       <div class="title-box">
         <div class="sub-title-box">
-          <p class="sub-title">
+          <p>
             In computer security Capture the Flag (CTF), 
             "flags" are secrets hidden in purposefully-vulnerable 
             programs or websites. Competitors steal flags either 
@@ -30,7 +34,11 @@
             and writing exploits..
           </p>
           <p class="info-source">
-            <a href="https://en.wikipedia.org/wiki/Capture_the_flag">view-source</a>
+            <a href="https://en.wikipedia.org/wiki/Capture_the_flag" 
+               target="_blank" 
+               rel="noreferrer">
+               view-source
+            </a>
           </p>
         </div>
 

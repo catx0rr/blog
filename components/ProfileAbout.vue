@@ -1,5 +1,5 @@
 <template>
-  <div class="catx0rr p-index">
+  <div class="catx0rr p-about">
     <div class="catvatar-img">
       <b-img 
         src="@/assets/profile/catx0rr.png" 
