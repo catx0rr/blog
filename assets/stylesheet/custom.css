@@ -62,8 +62,11 @@ div#main {
 }
 
 footer {
+  text-align: center;
+  border-left: solid var(--border-color) 1px;
+  border-right: solid var(--border-color) 1px;
   background: var(--header-color);
-  box-shadow: 0px 1px 10px var(--border-color),
+  box-shadow: 0 -1px 10px var(--border-color),
     0 1px 1px var(--border-color);
 }
 
@@ -88,8 +91,15 @@ footer p {
 body,
 div#__layout,
 nav.navbar,
+div#main pre.line-numbers,
+div#main pre code,
+div#start-page .pf-component,
+div#start-page .blog-content,
+div#about-page .pf-component,
+div#about-page .about-content,
 div#ctf-page,
-.nav-header-links {
+.nav-header-links,
+footer {
   transition: background .7s ease-in-out;
 }
 
@@ -99,10 +109,6 @@ div#ctf-page,
 nav .navbar-brand {
   display: flex;
   padding: 0;
-}
-
-nav.navbar {
-  margin-bottom: .5em;
 }
 
 nav.navbar,
@@ -188,6 +194,11 @@ button .navbar-toggler-icon {
   background-image: var(--toggler-image);
 }
 
+.nav-item .no-glow {
+  text-decoration: none;
+  color: var(--color);
+}
+
 .nav-item .no-glow:hover {
   transition: none;
   color: var(--color);
@@ -206,6 +217,7 @@ span.desktop-view,
 .l-panel {
   display: inline-block;
 }
+
 
 @media only all and (max-width: 992px) {
   span.mobile-view, 
@@ -276,9 +288,17 @@ div#start-page {
 }
 
 #start-page div.pf-component,
-#about-page div.pf-component {
-    width: 30%;
-    
+#start-page div.p-index,
+#about-page div.pf-component,
+#about-page div.p-about,
+#about-page div.inner-img {
+    width: 100%;
+}
+
+div.inner-image {
+  text-align: center;
+  border-radius: .4em;
+
 }
 
 div.blog-content,
@@ -305,64 +325,91 @@ div.about-content {
   
 }
 
+div#main pre.line-numbers {
+  background: var(--border-color);
+  text-shadow: 0 1px var(--bg);
+}
+div#main pre code {
+  color: var(--bg);
+}
 
-/**ctf page**/
+/** index / about **/
+
+div#start-page .catvatar-img {
+  text-align: center;
+  margin: auto;
+}
+
+div#start-page div.pf-component,
+div#about-page div.pf-component {
+  background: var(--header-color);
+  border-left: solid var(--border-color) 1px;
+  box-shadow: 0 1px 10px var(--border-color),
+    0 1px 1px var(--border-color);
+  
+}
+
+div#start-page .blog-content,
+div#about-page .about-content {
+  background: var(--header-color);
+  border-right: solid var(--border-color) 1px;
+  box-shadow: 0 1px 10px var(--border-color),
+    0 1px 1px var(--border-color);
+  padding: 0 .75em;
+}
+/** ctf page **/
 
 div#ctf-page {
   padding-top: 1em;
+  padding-bottom: .5em;
   background: var(--header-color);
   box-shadow: 0 1px 10px var(--border-color),
     0 1px 1px var(--border-color);
-  height: 630px;
-  margin: 0 0 .5em 0;
+  height: 670px;
   font-family: 'Noto Sans', sans-serif;
   text-align: center;
 }
 
+div#ctf-page .nav-header-links {
+  text-align: left;
+  padding: 0 1em 0;
+}
+
 div#ctf-page .page-title {
   font-size: 3em;
-  margin: 1em 0 1em 0;
+  margin: .75em 0 .755em 0;
 }
 
 div#ctf-page .sub-title-box {
   padding: 1em 1.5em 1em 1.5em;
 }
 
-div#ctf-page .nav-header-links {
-  background: var(--header-color);
-  border-radius: 1.5em;
-  margin: 0 0 1em 2.5em;
-  padding: .5em 0;
-  width: 12%;
-  box-shadow: 0 1px 10px var(--border-color),
-    0 1px 1px var(--border-color);
+div.write-ups {
+  padding: 1em;
 }
 
-div#ctf-page .link-inner {
-  margin: 0 1em 0 1em;
+div.ctf-link {
+  padding: .5em;
+  font-size: 1.3em;
 }
 
-@media only all and (max-width: 1240px) {
-  div#ctf-page .nav-header-links {
-    width: 15%;
-  }
+div#ctf-page a {
+  color: var(--hover-color);
+
+}
+
+div#ctf-page p {
+  font-family: 'Noto Sans', sans-serif;
 }
 
 @media only all and (max-width: 992px) {
   div#ctf-page {
     height: 100%;
   }
-  div#ctf-page .nav-header-links {
-    width: 15%;
-  }
 }
 
 @media only all and (max-width: 576px) {
   div#ctf-page {
     height: 100%;
-  }
-  div#ctf-page .nav-header-links {
-    width: 30%;
-    margin: 0 0 1em 1em;
   }
 }
