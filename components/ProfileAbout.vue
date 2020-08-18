@@ -1,11 +1,13 @@
 <template>
   <div class="catx0rr p-about">
-    <div class="catvatar-img">
-      <b-img 
-        src="@/assets/profile/catx0rr.png" 
-        fluid 
-        alt="cybernin.png">
-      </b-img>
+    <div class="outer-img">
+      <div class="inner-img">
+        <b-img 
+          src="@/assets/profile/catx0rr.png" 
+          fluid 
+          alt="cybernin.png">
+        </b-img>
+      </div>
     </div>
     
     <div class="info-panel">

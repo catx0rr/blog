@@ -92,7 +92,8 @@ body,
 div#__layout,
 nav.navbar,
 div#main pre.line-numbers,
-div#main pre code,
+div#main pre.line-numbers code,
+div#main .header-component,
 div#start-page .pf-component,
 div#start-page .blog-content,
 div#about-page .pf-component,
@@ -281,16 +282,13 @@ span.desktop-view,
 
 /** Pages **/
 
-div#about-page,
-div#start-page {
-    display: flex;
-    
+div#start-page,
+div#about-page {
+  display: flex;
 }
 
-#start-page div.pf-component,
 #start-page div.p-index,
-#about-page div.pf-component,
-#about-page div.p-about,
+#about-page div.p-about-content,
 #about-page div.inner-img {
     width: 100%;
 }
@@ -304,8 +302,12 @@ div.inner-image {
 div.blog-content,
 div.about-content {
     width: 70%;
-      flex-grow: 1;
-      
+    flex-grow: 1;
+    text-align: center;     
+}
+
+div.s-links {
+  text-align: left;
 }
 
 @media only all and (max-width: 992px) {
@@ -335,6 +337,7 @@ div#main pre code {
 
 /** index / about **/
 
+
 div#start-page .catvatar-img {
   text-align: center;
   margin: auto;
@@ -357,6 +360,26 @@ div#about-page .about-content {
     0 1px 1px var(--border-color);
   padding: 0 .75em;
 }
+
+div#main .header-component {
+  text-align: center;
+  padding: 2em 0 2em;
+  background: var(--header-color);
+  border-left: solid var(--border-color) 1px;
+  border-right: solid var(--border-color) 1px;
+  border-bottom: solid var(--border-color) 1px;
+  box-shadow: 0 1px 10px var(--border-color),
+    0 1px 1px var(--border-color);
+}
+
+@media only all and (max-width: 992px) {
+  div#start-page .blog-content,
+  div#about-page .about-content {
+    width: 100%;
+    padding: 2em;
+  }
+}
+
 /** ctf page **/
 
 div#ctf-page {
@@ -412,4 +435,22 @@ div#ctf-page p {
   div#ctf-page {
     height: 100%;
   }
+}
+
+/** profile component **/
+
+div.outer-img {
+  text-align: center;
+  margin-top: 1em;
+}
+div.inner-img {
+  padding: 1em;
+  margin: auto;
+  width: 70%;  
+}
+
+div.inner-img img {
+  border-radius: .5em;
+  box-shadow: 0 3px 10px var(--border-color),
+    0 1px 1px var(--border-color);
 }

@@ -2,10 +2,8 @@
   <b-container fluid id="ctf-page">
     <b-container fluid>
     <div class="nav-header-links">
-      <div class="link-inner">
         <nuxt-link to="/">catx0rr</nuxt-link> /
         <nuxt-link to="/ctf">ctf</nuxt-link>
-      </div>
     </div>
     </b-container>
     
@@ -48,9 +46,9 @@
 
         <div class="ctf-link">
           <p>
-          <nuxt-link to="/ctf/tryhackme">
-            <i class="fab fa-cloudversify"> Tryhackme</i>
-          </nuxt-link>
+            <nuxt-link to="/ctf/tryhackme">
+              <i class="fab fa-cloudversify"></i> Tryhackme
+            </nuxt-link>
           </p>
         </div>
 
