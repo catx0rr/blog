@@ -1,5 +1,5 @@
 <template>
-  <b-container fluid class="post-panel l-panel">
+  <b-container fluid class="post-panel l-panel desktop-view">
     <div>
       <div class="post-title">
         <h4>Recent Posts</h4>

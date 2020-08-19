@@ -28,19 +28,19 @@
       </div>
       
       <div class="socials">
-        <a href="https://github.com" title="github">
+        <a href="https://github.com" target="_blank" title="github">
           <i class="icons fab fa-github"></i>
         </a>
         -
-        <a href="https://tryhackme.com/p/catx0rr" title="tryhackme">
+        <a href="https://tryhackme.com/p/catx0rr" target="_blank" title="tryhackme">
           <i class="icons fab fa-cloudversify"></i>
         </a>
         -
-        <a href="https://hackthebox.eu/profile/250470" title="hackthebox">
+        <a href="https://hackthebox.eu/profile/250470" target="_blank" title="hackthebox">
           <i class="icons fas fa-cube"></i>
         </a>
         -
-        <a href="https://www.linked.com/in/catx0rr">
+        <a href="https://www.linked.com/in/catx0rr" target="_blank" title="linkedin">
           <i class="icons fab fa-linkedin"></i>
         </a>
       </div>

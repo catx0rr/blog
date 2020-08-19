@@ -1,10 +1,10 @@
 <template>
-  <b-container fluid id="ctf-page">
+  <b-container fluid id="ctf-page" class="end">
     <b-container fluid>
-    <div class="nav-header-links">
+      <div class="nav-header-links">
         <nuxt-link to="/">catx0rr</nuxt-link> /
         <nuxt-link to="/ctf">ctf</nuxt-link>
-    </div>
+      </div>
     </b-container>
     
     <div class="page-title">
@@ -52,7 +52,7 @@
           </p>
         </div>
 
-        <div class="ctf-link">
+        <div class="ctf-link end">
           <p>
             <nuxt-link to="/ctf/hackthebox">
               <i class="fas fa-cube"></i> Hackthebox

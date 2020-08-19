@@ -8,7 +8,7 @@
   --bg: #d9d9d9;
   --bg-secondary: #f2f2f2;
   --border-color: #737373;
-  --hover-color: #5d8bad;
+  --hover-color: #0276FD;
   --header-color: #f3f5f4;
   --revbg-color: #161616a;
   --toggler-color: rgba(0, 0, 0, 0.1);
@@ -51,6 +51,9 @@ div#__layout {
 
 div#main {
   width: 70%;
+  background: var(--header-color);
+  box-shadow: 0 1px 10px var(--border-color),
+    0 1px 1px var(--border-color);
 }
 
 @media only all and (max-width: 992px) {
@@ -61,13 +64,17 @@ div#main {
   }
 }
 
+a {
+  color: var(--hover-color);
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
 footer {
   text-align: center;
-  border-left: solid var(--border-color) 1px;
-  border-right: solid var(--border-color) 1px;
   background: var(--header-color);
-  box-shadow: 0 -1px 10px var(--border-color),
-    0 1px 1px var(--border-color);
 }
 
 footer p {
@@ -91,17 +98,23 @@ footer p {
 body,
 div#__layout,
 nav.navbar,
+div#main,
 div#main pre.line-numbers,
 div#main pre.line-numbers code,
-div#main .header-component,
-div#start-page .pf-component,
-div#start-page .blog-content,
-div#about-page .pf-component,
-div#about-page .about-content,
 div#ctf-page,
+.header-component,
+.pf-component,
+.blog-content,
+.about-content,
+.post-panel,
+.info-panel,
 .nav-header-links,
 footer {
   transition: background .7s ease-in-out;
+}
+
+a {
+  transition: color .7s ease-in-out;
 }
 
 /** Components **/
@@ -113,10 +126,11 @@ nav .navbar-brand {
 }
 
 nav.navbar,
-nav .menu-item .sub-menu {
+nav .menu-item .sub-menu,
+div.info-panel,
+div.post-panel {
   background: var(--header-color);
-  box-shadow: 0 1px 10px var(--border-color),
-    0 1px 1px var(--border-color);
+  box-shadow: 0 3px 2px -2px var(--border-color);
 }
 
 nav .menu-item .sub-menu {
@@ -125,7 +139,6 @@ nav .menu-item .sub-menu {
   font-size: .75em;
   width: max-content;
   z-index: 1;
-  box-shadow: 0 3px 3px var(--border-color)
 }
 
 .fade-enter-active,
@@ -214,15 +227,21 @@ span.mobile-view,
 
 span.desktop-view, 
 .p-index, 
-.p-about,
+.p-about {
+  display: inline;
+}
+
 .l-panel {
-  display: inline-block;
+  display: block;
 }
 
 
 @media only all and (max-width: 992px) {
-  span.mobile-view, 
-  .r-panel {  
+  span.mobile-view {  
+    display: inline;
+  }
+
+  .r-panel {
     display: inline-block;
   }
   
@@ -230,6 +249,10 @@ span.desktop-view,
   .p-index,
   .l-panel {
     display: none;
+  }
+
+  div.post-panel {
+    box-shadow: 0 0 0 0 ;
   }
 }
 
@@ -288,8 +311,7 @@ div#about-page {
 }
 
 #start-page div.p-index,
-#about-page div.p-about-content,
-#about-page div.inner-img {
+#about-page div.p-about-content {
     width: 100%;
 }
 
@@ -300,17 +322,36 @@ div.inner-image {
 }
 
 div.blog-content,
-div.about-content {
-    width: 70%;
+div#about-page .about-content {
+    width: 75%;
     flex-grow: 1;
     text-align: center;     
 }
 
 div.s-links {
   text-align: left;
+  padding-bottom: 2em;
+}
+
+div.bdg-title {
+  padding-bottom: 1em;
+}
+
+div.htb-inner {
+  width: 60%;
+  margin: auto;
+  padding-top: .5em;
+}
+
+div.p-data {
+  margin-top: 1.5em;
 }
 
 @media only all and (max-width: 992px) {
+  div#about-page .info-panel {
+    box-shadow: 0 0 0 0;
+  }
+  
   div.blog-content,
   div.about-content {
     flex-grow: 0;
@@ -325,6 +366,16 @@ div.s-links {
     font-size: 5vh;      
   }
   
+  div.thm,
+  div.htb {
+    padding: .5em 0;
+    margin: .5em 0;
+  }
+
+  div.sha-sig p {
+    text-align: center;
+    padding: 1em;
+  }
 }
 
 div#main pre.line-numbers {
@@ -346,30 +397,23 @@ div#start-page .catvatar-img {
 div#start-page div.pf-component,
 div#about-page div.pf-component {
   background: var(--header-color);
-  border-left: solid var(--border-color) 1px;
-  box-shadow: 0 1px 10px var(--border-color),
-    0 1px 1px var(--border-color);
-  
 }
 
 div#start-page .blog-content,
 div#about-page .about-content {
   background: var(--header-color);
-  border-right: solid var(--border-color) 1px;
+  padding: 0 .75em;
+}
+
+div#main {
   box-shadow: 0 1px 10px var(--border-color),
     0 1px 1px var(--border-color);
-  padding: 0 .75em;
 }
 
 div#main .header-component {
   text-align: center;
   padding: 2em 0 2em;
   background: var(--header-color);
-  border-left: solid var(--border-color) 1px;
-  border-right: solid var(--border-color) 1px;
-  border-bottom: solid var(--border-color) 1px;
-  box-shadow: 0 1px 10px var(--border-color),
-    0 1px 1px var(--border-color);
 }
 
 @media only all and (max-width: 992px) {
@@ -378,16 +422,32 @@ div#main .header-component {
     width: 100%;
     padding: 2em;
   }
+  
+  div#about-page .pg-title {
+    padding-bottom: 1em;
+  }
+  
+  div#about-page .pg-title,
+  div#about-page .pf-component {
+    text-align: center;
+  }
+  
+  div#about-page .inner-img {
+    margin: auto;
+  }
+
+  div#about-page img {
+    text-align: center;
+  }
+
 }
 
 /** ctf page **/
 
 div#ctf-page {
   padding-top: 1em;
-  padding-bottom: .5em;
+  padding-bottom: .75em;
   background: var(--header-color);
-  box-shadow: 0 1px 10px var(--border-color),
-    0 1px 1px var(--border-color);
   height: 670px;
   font-family: 'Noto Sans', sans-serif;
   text-align: center;
@@ -416,6 +476,10 @@ div.ctf-link {
   font-size: 1.3em;
 }
 
+div.ctf-link.end {
+  padding-bottom: 2em;
+}
+
 div#ctf-page a {
   color: var(--hover-color);
 
@@ -440,17 +504,52 @@ div#ctf-page p {
 /** profile component **/
 
 div.outer-img {
-  text-align: center;
-  margin-top: 1em;
+  padding-bottom: 1em;
 }
+
 div.inner-img {
-  padding: 1em;
-  margin: auto;
-  width: 70%;  
+  width: 77%; 
+  margin-left: 1.5em;
 }
 
 div.inner-img img {
   border-radius: .5em;
   box-shadow: 0 3px 10px var(--border-color),
     0 1px 1px var(--border-color);
+}
+
+div.info-panel {
+  padding: 0 1.5em 1.5em;
+  margin-bottom: 1em;
+}
+
+.l-panel, 
+.r-panel {
+  padding: 0 2.5em 1.5em;
+}
+
+div.recent-posts li {
+  padding: .5em;
+}
+
+div.post-title {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+div.socials {
+  font-size: 3vh;
+}
+
+div.socials a {
+  margin: 0 .25em 0 .5em;
+  color: var(--color);
+  transition: .5s ease-out;
+}
+
+div.socials a:hover {
+  transition: .5s ease-out;
+  color: var(--hover-color);
+  text-shadow: 0 0 1px var(--hover-color),
+    0 0 5px var(--hover-color);
 }
